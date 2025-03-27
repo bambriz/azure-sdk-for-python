@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: azure-sdk-tools
+Version: 0.0.0
+Home-page: https://github.com/Azure/azure-sdk-for-python
+Author: Microsoft Corporation
+Author-email: azpysdkhelp@microsoft.com
+Provides-Extra: build
+Provides-Extra: conda
+Provides-Extra: systemperf
+Provides-Extra: ghtools
+
+Build and test tooling for the Azure SDK for Python
