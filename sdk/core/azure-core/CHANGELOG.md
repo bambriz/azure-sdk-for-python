@@ -1,6 +1,24 @@
 # Release History
 
-## 1.36.0 (Unreleased)
+## 1.37.1 (Unreleased)
+
+### Features Added
+
+### Breaking Changes
+
+### Bugs Fixed
+
+### Other Changes
+
+- Updated `BearerTokenCredentialPolicy` and `AsyncBearerTokenCredentialPolicy` to set the `enable_cae` parameter to `True` by default. This change enables Continuous Access Evaluation (CAE) for all token requests made through these policies.  #42941
+
+## 1.37.0 (2025-12-11)
+
+### Features Added
+
+- Added `get_backcompat_attr_name` to `azure.core.serialization`. `get_backcompat_attr_name` gets the backcompat name of an attribute using backcompat attribute access.  #44084
+
+## 1.36.0 (2025-10-14)
 
 ### Features Added
 
@@ -11,10 +29,11 @@
 ### Bugs Fixed
 
 - Fixed repeated import attempts of cchardet and chardet when charset_normalizer is used #43092
+- Fixed leaked requests and aiohttp exceptions for streamed responses #43200
+- Improved granularity of ServiceRequestError and ServiceResponseError exceptions raised in timeout scenarios from the requests and aiohttp transports #43200
 
 ### Other Changes
 
-- Updated `BearerTokenCredentialPolicy` and `AsyncBearerTokenCredentialPolicy` to set the `enable_cae` parameter to `True` by default. This change enables Continuous Access Evaluation (CAE) for all token requests made through these policies.  #42941
 - Removed `six` as a dependency since it was unused. #39962
 - Added caching to the tracing implementation detection function to prevent potential performance issues from repeated import attempts. #43338
 
